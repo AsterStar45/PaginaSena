@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | Professional Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Pedro Mendoza</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors" href="inicio.html">Inicio</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors" href="portafolio.html">Portafolio</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-bold rounded-lg text-white bg-primary hover:bg-primary/90 transition-all shadow-sm">
+                        Únete ahora
+                    </button>
+<button class="md:hidden text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content: Login Form Section -->
+<main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="max-w-md w-full space-y-8">
+<div class="bg-white dark:bg-slate-900 shadow-xl rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800">
+<!-- Card Header with Image -->
+<div class="relative h-32 bg-primary/10 flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 opacity-20 bg-gradient-to-br from-primary to-indigo-600"></div>
+<div class="relative z-10 text-center">
+<span class="material-symbols-outlined text-primary text-5xl">account_circle</span>
+</div>
+</div>
+<div class="p-8">
+<div class="text-center mb-8">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white">Bienvenido</h2>
+<p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Ingresa tus credenciales para acceder</p>
+</div>
+<form action="#" class="space-y-6" method="POST">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="email">Correo Electrónico</label>
+<div class="mt-1 relative rounded-md shadow-sm">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 text-sm">mail</span>
+</div>
+<input autocomplete="email" class="block w-full pl-10 pr-3 py-3 border border-slate-300 dark:border-slate-700 dark:bg-slate-800 rounded-lg focus:ring-primary focus:border-primary text-slate-900 dark:text-white placeholder-slate-400 sm:text-sm" id="email" name="email" placeholder="nombre@agencia.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="password">Contraseña</label>
+<div class="text-sm">
+<a class="font-medium text-primary hover:text-primary/80" href="#">¿Olvidaste tu contraseña?</a>
+</div>
+</div>
+<div class="mt-1 relative rounded-md shadow-sm">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 text-sm">lock</span>
+</div>
+<input autocomplete="current-password" class="block w-full pl-10 pr-10 py-3 border border-slate-300 dark:border-slate-700 dark:bg-slate-800 rounded-lg focus:ring-primary focus:border-primary text-slate-900 dark:text-white placeholder-slate-400 sm:text-sm" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer">
+<span class="material-symbols-outlined text-slate-400 text-sm" data-icon="visibility">visibility</span>
+</div>
+</div>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary focus:ring-primary border-slate-300 dark:border-slate-700 rounded transition-colors bg-white dark:bg-slate-800" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-2 block text-sm text-slate-700 dark:text-slate-300" for="remember-me">
+                                Recordarme en este equipo
+                            </label>
+</div>
+<div>
+<button class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-bold rounded-lg text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all shadow-md" type="submit">
+                                Iniciar Sesión
+                            </button>
+</div>
+</form>
+<div class="mt-6">
+<div class="relative">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-200 dark:border-slate-800"></div>
+</div>
+<div class="relative flex justify-center text-sm">
+<span class="px-2 bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400">O continúa con</span>
+</div>
+</div>
+<div class="mt-6 grid grid-cols-2 gap-3">
+<button class="w-full inline-flex justify-center py-2.5 px-4 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<img alt="Google Logo" class="h-5 w-5 mr-2" data-alt="Google colorful brand logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdsZpqioKgpy7CK9A-lempEOqHyPGmViuXBbBoLsiN57-qus9w9Hw9_xji8DZ2o8AWFEUIZsyimzcxYbB-4JxGx_3WpDXlBXTvhwlpNbanap6W_j_RqyAzmbYlaPOXflTL-2HchwLGHslRhVeO2TDUKG5urOkzVMOgIydo_t3Auei0b9zzPCrMGHUx5tLXGoOkd6hqTdEzIJEK27UXOLQthCd3KH2s6ZmUO_ms4YTspDAvpU9RbbqJGNBeWSd9Qexx2Wtj8pB9wl6T"/>
+                                Google
+                            </button>
+<button class="w-full inline-flex justify-center py-2.5 px-4 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<img alt="GitHub Logo" class="h-5 w-5 mr-2" data-alt="GitHub simple black and white logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8X3_tzF57hDNBkDS9wyx2JL2nNxV08W-ss5S2uNqxpA5ZT8JTDNd4ywPwpU_1Zh9q-Gls3ba1BTGswbzN6_GTcWx9nsppVNXWOXIIjR51shcoZi96VwGnQpDElWk3RODGi13cjo1PKBKzBOm5ch7DT50pp2NLxZlU4zM-EpWxGPmSXtOYpd3L_q0TD73QqRKzgwuJG4anVtP_r6EsVLxicUhMyqEA2Zgm7PRrWFZu3y0npcsux6uLL1ItMttU9QGYYTwA4lpa9fQb"/>
+                                GitHub
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<p class="text-center text-sm text-slate-500 dark:text-slate-400">
+                ¿No tienes una cuenta? 
+                <a class="font-medium text-primary hover:text-primary/80" href="#">Regístrate gratis</a>
+</p>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 pt-12 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="rocket_launch">rocket_launch</span>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Pedro Mendoza</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Soluciones digitales de alto impacto para emprendedores y empresas con visión de futuro.
+                    </p>
+<div class="flex gap-4 mt-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Servicios</h3>
+<ul class="space-y-2">
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Diseño UI/UX</a></li>
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Desarrollo Web</a></li>
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Marketing Digital</a></li>
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Consultoría SEO</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Compañía</h3>
+<ul class="space-y-2">
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Sobre nosotros</a></li>
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Carreras</a></li>
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Blog</a></li>
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Prensa</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Legal</h3>
+<ul class="space-y-2">
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Privacidad</a></li>
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Términos</a></li>
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Cookies</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-500 dark:text-slate-400">
+                    © 2026 Pedro Mendoza. Todos los derechos reservados.
+                </p>
+<div class="flex items-center gap-6">
+<span class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">language</span> Español (ES)
+                    </span>
+<span class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
+                        Hecho con <span class="material-symbols-outlined text-xs text-red-500 font-variation-settings-'FILL'1">favorite</span> en Colombia
+                    </span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
